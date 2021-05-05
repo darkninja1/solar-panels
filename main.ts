@@ -1,12 +1,13 @@
 let light_level = 0
+let lights =  {
+	
+}
+
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
     let time: number;
     
-    let lights =  {
-    	
-    }
     
-    let greater = []
+    let greater1 = []
     let degrees = 0
     let degrees2 = 0
     while (true) {
@@ -20,11 +21,11 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
             }
             // lights[light_level] = degrees
             // lights.append(light_level)
-            // for keys in lights.items():
-            //     greater.append(keys)    
-            // thelight = max(greater)
+            // for key in lights:
+            //     greater1.append(key)   
+            // thelight = max(greater1)
             // degrees2 = lights[thelight]
-            pins.servoWritePin(AnalogPin.P0, degrees2)
+            // pins.servo_write_pin(AnalogPin.P0, degrees2) 
             
         }
         

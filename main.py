@@ -15,13 +15,13 @@ def on_button_pressed_a():
                 degrees = degrees + 1
                 light_level = input.light_level()
                 pins.servo_write_pin(AnalogPin.P0, degrees)
-                lights[light_level] = degrees
+                #lights[light_level] = degrees
                 #lights.append(light_level)
-            for key in lights:
-                greater1.append(key)   
-            thelight = max(greater1)
-            degrees2 = lights[thelight]
-            pins.servo_write_pin(AnalogPin.P0, degrees2) 
+            #for key in lights:
+            #    greater1.append(key)   
+            #thelight = max(greater1)
+            #degrees2 = lights[thelight]
+            #pins.servo_write_pin(AnalogPin.P0, degrees2) 
             pass        
 
                 
