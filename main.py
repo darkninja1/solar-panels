@@ -1,9 +1,9 @@
 lights = []
+lights2 = []
 degrees2 = 0
 light_level = 0
 degrees = 0
 greater1 = []
-lights2: List[number] = []
 def myMax(list1):
     max1 = list1[0]
     for x in list1:
@@ -14,16 +14,16 @@ while True:
     time = input.running_time_micros()
     if time == 1000:
         time = time - 1000
-        print("now")
         for index in range(270):
             degrees = degrees + 1
             light_level = input.light_level()
             pins.servo_write_pin(AnalogPin.P0, degrees)
             lights.append(light_level)
-            lights[light_level] = [degrees]
-            print(degrees)
+            lights2.append(degrees)
         for key in lights:
             greater1.append(key)
         thelight = myMax(greater1)
-        degrees2 = lights.index(thelight)
+        lightindex1 = lights.index(thelight)
+        lightindex2 = lights.index(lightindex1)
+        degrees2 = lightindex2
         pins.servo_write_pin(AnalogPin.P0, degrees2)
