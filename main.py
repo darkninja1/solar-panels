@@ -12,8 +12,8 @@ def myMax(list1):
     return max1
 while True:
     time = input.running_time_micros()
-    if time == 1000:
-        time = time - 1000
+    if time == 3600000:
+        time = time - 3600000
         for index in range(270):
             degrees = degrees + 1
             light_level = input.light_level()
