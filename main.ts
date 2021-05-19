@@ -1,11 +1,21 @@
-let light_level = 0
-let lights =  {
-	
+function myMax(list1: number[]): number {
+    let max1 = list1[0]
+    for (let x of list1) {
+        if (x > max1) {
+            max1 = x
+        }
+        
+    }
+    return max1
 }
 
-input.onButtonPressed(Button.A, function on_button_pressed_a() {
+function on_button_pressed_a() {
     let time: number;
-    
+    let thelight: number;
+    let light_level = 0
+    let lights =  {
+    	
+    }
     
     let greater1 = []
     let degrees = 0
@@ -18,19 +28,22 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
                 degrees = degrees + 1
                 light_level = input.lightLevel()
                 pins.servoWritePin(AnalogPin.P0, degrees)
+                lights[light_level] = degrees
+                lights.push(light_level)
             }
-            // lights[light_level] = degrees
-            // lights.append(light_level)
-            // for key in lights:
-            //     greater1.append(key)   
-            // thelight = max(greater1)
-            // degrees2 = lights[thelight]
-            // pins.servo_write_pin(AnalogPin.P0, degrees2) 
-            
+            for (let key of lights) {
+                greater1.push(key)
+            }
+            thelight = myMax(greater1)
+            degrees2 = lights[thelight]
+            pins.servoWritePin(AnalogPin.P0, degrees2)
         }
         
     }
-})
+}
+
+// pass        
+// input.on_button_pressed(Button.A, on_button_pressed_a)
 /** 
 while True:
     time = input.running_time()
