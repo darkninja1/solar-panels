@@ -1,3 +1,4 @@
+#due to microbits not having all the same functions and methods as python 3 i had to improvise
 lights = []
 lights2 = []
 degrees2 = 0
