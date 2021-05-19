@@ -13,7 +13,15 @@ def myMax(list1):
 while True:
     time = input.running_time_micros()
     if time == 3600000:
+        #resetting all variables
         time = time - 3600000
+        pins.servo_write_pin(AnalogPin.P0, degrees2)
+        degrees2 = degrees2 - degrees2
+        degrees = degrees - degrees
+        light_level = light_level - light_level
+        lights.clear()
+        lights2.clear()
+        greater1.clear()
         for index in range(270):
             degrees = degrees + 1
             light_level = input.light_level()
