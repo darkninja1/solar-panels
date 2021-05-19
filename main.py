@@ -16,7 +16,7 @@ while True:
     if time == 3600000:
         #resetting all variables
         time = time - 3600000
-        pins.servo_write_pin(AnalogPin.P0, degrees2)
+        pins.servo_write_pin(AnalogPin.P0, 0)
         degrees2 = degrees2 - degrees2
         degrees = degrees - degrees
         light_level = light_level - light_level
