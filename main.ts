@@ -1,5 +1,5 @@
 let time: number;
-let thelight: ?50277;
+let thelight: ?52614;
 let lightindex1: number;
 let lightindex2: number;
 let lights = []
@@ -35,7 +35,7 @@ while (true) {
         }
         thelight = myMax(greater1)
         lightindex1 = _py.py_array_index(lights, thelight)
-        lightindex2 = _py.py_array_index(lights, lightindex1)
+        lightindex2 = _py.py_array_index(lights2, lightindex1)
         degrees2 = lightindex2
         pins.servoWritePin(AnalogPin.P0, degrees2)
     }

@@ -24,6 +24,6 @@ while True:
             greater1.append(key)
         thelight = myMax(greater1)
         lightindex1 = lights.index(thelight)
-        lightindex2 = lights.index(lightindex1)
+        lightindex2 = lights2.index(lightindex1)
         degrees2 = lightindex2
         pins.servo_write_pin(AnalogPin.P0, degrees2)
