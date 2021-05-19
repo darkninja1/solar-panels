@@ -35,4 +35,5 @@ while True:
         lightindex1 = lights.index(thelight)
         lightindex2 = lights2.index(lightindex1)
         degrees2 = lightindex2
+        pins.servo_write_pin(AnalogPin.P0, 0)
         pins.servo_write_pin(AnalogPin.P0, degrees2)
