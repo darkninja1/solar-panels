@@ -1,41 +1,31 @@
-
-def myMax(list1):
+def myMax(list1: List[number]):
     max1 = list1[0]
     for x in list1:
-        if x > max1 :
+        if x > max1:
             max1 = x
-    return max1        
-def on_button_pressed_a():
-    light_level = 0
-    lights = {}
-    greater1 = []
-    degrees = 0
-    degrees2 = 0
-    while True:
-        time = input.running_time_micros()
-        if (time == 1000):
-            time = time - 1000
-            for times in range(271):
-                degrees = degrees + 1
-                light_level = input.light_level()
-                pins.servo_write_pin(AnalogPin.P0, degrees)
-                lights[light_level] = degrees
-                lights.append(light_level)
-            for key in lights:
-                greater1.append(key)  
-            thelight = myMax(greater1)
-            degrees2 = lights[thelight]
-            pins.servo_write_pin(AnalogPin.P0, degrees2) 
-            #pass        
+    return max1
 
-                
-
-#input.on_button_pressed(Button.A, on_button_pressed_a)
-'''
+light_level = 0
+# unknown expression:  178
+lights = []
+lights2 = []
+greater1 = []
+degrees = 0
+degrees2 = 0
 while True:
-    time = input.running_time()
-    print(time)
-#1,000 ms = 1 sec   
-#60,000 ms = 1 min 
-#360,000 ms = 1 hour
-'''    
+    time = input.running_time_micros()
+    if time == 1000:
+        time = time - 1000
+        print('now')
+        for times in range(271):
+            degrees = degrees + 1
+            light_level = input.light_level()
+            pins.servo_write_pin(AnalogPin.P0, degrees)
+            lights[light_level] = degrees
+            lights.push(light_level)
+            print(degrees)
+        for key in lights:
+            greater1.append(key)
+        thelight = myMax(greater1)
+        degrees2 = lights[thelight]
+        pins.servo_write_pin(AnalogPin.P0, degrees2)
